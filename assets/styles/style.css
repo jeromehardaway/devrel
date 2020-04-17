@@ -10,8 +10,79 @@ body {
   margin: 0;
   padding: 0;
 }
+#calling-card {
+  background: url(/assets/img/oscon.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  height: 800px;
+}
 
+#calling-card h1 {
+  position: relative;
+  top: 10%;
+  left: 5%;
+  font-size: 30px;
+  color: #000;
+  background-color: #fff;
+  opacity: 0.5;
+}
+.cover {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+}
 
+.cover > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cover > :first-child:not(h1) {
+  margin-top: 0;
+}
+
+.cover > :last-child:not(h1) {
+  margin-bottom: 0;
+}
+
+.cover > h1 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.stack {
+  --space: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+} 
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 100%;
+}
+
+.grid.aboveMin {
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+@supports (width: min(20rem, 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  }
+}
 /* Calling card above the fold content */
 
 #calling-card {
@@ -27,18 +98,18 @@ body {
   top: 10%;
   left: 5%;
   font-size: 30px;
-  color: #fff;
+  color: #000;
+  background-color: #fff;
+  opacity: 0.5;
 }
 
-#main {
-  display: flex;
+
+.intro {
   padding: 20px 40px 40px;
+  display: flex;
 }
-#main img {
-  margin: 20px 30px 0 0;
-		object-fit: contain;
-		align-self: flex-start;
-}
+
+
 
 #headshot {
   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
@@ -48,7 +119,9 @@ body {
   left: 5%;
   width: 250px;
   height: 250px;
-  margin-top: 20px;
+  margin: 20px 30px 0 0;
+  object-fit: contain;
+  align-self: flex-start;
 }
 
 @keyframes rotate {
@@ -60,8 +133,12 @@ body {
   }
 }
 
-#main p {
+.intro p {
   flex: 1 1 auto;
+  position: relative;
+  left: 5%;
+  margin-top: 5%;
+  max-width: 640px;
 }
 
 
