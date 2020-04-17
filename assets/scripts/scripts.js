@@ -60,7 +60,7 @@ document.getElementById('submit-btn').addEventListener('click', (event) => {
 });
 
 //jquery delete
-$(document).on('click', 'tr', function () {
+$(document).on('click', 'button', function () {
   $(this).closest('tr').remove();
   return false;
 });
