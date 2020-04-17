@@ -60,7 +60,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 5%;
 }
 
 .stack > * {
@@ -79,7 +78,6 @@ justify-content: center;
   margin-top: 5%;
   max-width: 440px;
   font-size: 1.3rem;
-  margin-left: 5%;
 }
 
 
