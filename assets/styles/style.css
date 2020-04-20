@@ -28,6 +28,7 @@ a {
 a:hover {
   text-decoration: underline;
   color: var(--captain-america-red);
+  font-size: 2rem;
 }
 .cover {
   display: flex;
@@ -93,10 +94,18 @@ justify-content: center;
   margin-left: 5%;
 }
 
+.entry-form p {
+  padding-right: 5%;
+  text-align: center;
+}
+
+
 .title {
   font-weight: 900;
   font-size: 1.5rem;
   padding-top: 3%;
+  text-align: center;
+  padding-right: 5%;
 }
 
 
